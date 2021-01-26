@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogIn"
+    android:clickable="true"
+    android:background="#1A6FCC"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+   android:padding="10dp"
+    android:gravity="center">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif"
+        android:layout_width="590dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="0dp"
+        android:src="@drawable/login" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:background="#1A6FCC"
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusForward="@id/password"
+            android:padding="10dp">
+
+            <EditText
+
+                android:id="@+id/email"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_edittext"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:nextFocusForward="@id/password"
+                android:textColorHint="@color/purple_500"
+                android:textSize="20dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:padding="10dp"
+            app:passwordToggleEnabled="true"
+
+            >
+
+            <EditText
+                android:paddingLeft="10dp"
+                android:background="@drawable/login_edittext"
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:textColorHint="@color/purple_500"
+                android:textSize="20dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/sign"
+            android:textColor="#EAD203"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New User? Sign In"/>
+        <TextView
+            android:id="@+id/error"
+            android:textColor="#EAD203"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LogIn Error"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
